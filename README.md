@@ -11,16 +11,16 @@ Aside from TryHackMe's Advent of Cyber, this year I'll try to solve all the puzz
 Please be welcomed to my solutions for Advent of Code 2021!! :smiley:
 This year I will try to complete every day at least with my strongest suit (Python) within the day and save a record whether the target has been met. Then, attempt to complete them in Golang without a time constraint (ideally will mark with a check if solved before the next Advent of Code).
 
-|         Puzzle         |           Language            |     Completed      | Specials |
-|:----------------------:|:-----------------------------:|:------------------:|:--------:|
-| [Day 1](./2024/day_01) | [Go](./2024/day_01/day_01.go) | :heavy_check_mark: |          |
-|       [Day 2]()        |            [Go]()             |  |          |
-|       [Day 3]()        |            [Go]()             |  |          |
-|       [Day 4]()        |            [Go]()             |  |          |
-|       [Day 5]()        |            [Go]()             |  |          |
-|       [Day 6]()        |            [Go]()             |                    |          |
-|       [Day 7]()        |            [Go]()             |                    |          |
-|       [Day 8]()        |            [Go]()             |                    |          |
+|         Puzzle         |           Language            |     Completed      |      Specials      |
+|:----------------------:|:-----------------------------:|:------------------:|:------------------:|
+| [Day 1](./2024/day_01) | [Go](./2024/day_01/day_01.go) | :heavy_check_mark: | Array manipulation |
+|       [Day 2]()        |            [Go]()             |  |                    |
+|       [Day 3]()        |            [Go]()             |  |                    |
+|       [Day 4]()        |            [Go]()             |  |                    |
+|       [Day 5]()        |            [Go]()             |  |                    |
+|       [Day 6]()        |            [Go]()             |                    |                    |
+|       [Day 7]()        |            [Go]()             |                    |                    |
+|       [Day 8]()        |            [Go]()             |                    |                    |
 
 
 ## AoC 2023
