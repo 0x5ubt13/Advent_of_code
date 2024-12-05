@@ -32,6 +32,38 @@ func GetInputAsInt64Array(filename string) []int64 {
 	return lines
 }
 
+func GetInputAsArrayOfInt64Arrays(filename string) [][]int64 {
+	lines := make([][]int64, 0)
+
+	f, err := os.Open(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer func(f *os.File) {
+		err := f.Close()
+		if err != nil {
+		}
+	}(f)
+
+	scanner := bufio.NewScanner(f)
+	scanner.Split(bufio.ScanLines)
+
+	for scanner.Scan() {
+		// 7 6 4 2 1
+		numbersLine := strings.Split(scanner.Text(), " ")
+		int64line := make([]int64, len(numbersLine))
+		for i := 0; i < len(numbersLine); i++ {
+			int64line[i], err = strconv.ParseInt(numbersLine[i], 10, 64)
+			if err != nil {
+				log.Fatal(err)
+			}
+		}
+
+		lines = append(lines, int64line)
+	}
+	return lines
+}
+
 func GetInputAsMapStringInt(filename string) []map[string]int {
 	file, err := os.Open(filename)
 	ErrorCheck(err)
@@ -56,6 +88,28 @@ func GetInputAsMapStringInt(filename string) []map[string]int {
 	}
 
 	return directions
+}
+
+func GetInputAsArrayOfStringArrays(filename string) [][]string {
+	lines := make([][]string, 0)
+
+	f, err := os.Open(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer func(f *os.File) {
+		err := f.Close()
+		if err != nil {
+		}
+	}(f)
+
+	scanner := bufio.NewScanner(f)
+	scanner.Split(bufio.ScanLines)
+
+	for scanner.Scan() {
+		lines = append(lines, strings.Split(scanner.Text(), " "))
+	}
+	return lines
 }
 
 // GetInputAsStringArray processes input and returns []string
