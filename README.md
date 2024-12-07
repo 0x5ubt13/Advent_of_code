@@ -6,21 +6,18 @@ Please be welcomed to my solutions for Advent of Code!!!
 
 Aside from TryHackMe's Advent of Cyber, this year I'll try to solve all the puzzles of Advent of Code too, with no time constraints.
 
-# Advent of Code 2021
+### Table of completion
 
-Please be welcomed to my solutions for Advent of Code 2021!! :smiley:
-This year I will try to complete every day at least with my strongest suit (Python) within the day and save a record whether the target has been met. Then, attempt to complete them in Golang without a time constraint (ideally will mark with a check if solved before the next Advent of Code).
-
-|         Puzzle         |           Language            |     Completed      |      Specials      |
-|:----------------------:|:-----------------------------:|:------------------:|:------------------:|
-| [Day 1](./2024/day_01) | [Go](./2024/day_01/day_01.go) | :heavy_check_mark: | Array manipulation |
-|       [Day 2]()        |            [Go]()             |  |                    |
-|       [Day 3]()        |            [Go]()             |  |                    |
-|       [Day 4]()        |            [Go]()             |  |                    |
-|       [Day 5]()        |            [Go]()             |  |                    |
-|       [Day 6]()        |            [Go]()             |                    |                    |
-|       [Day 7]()        |            [Go]()             |                    |                    |
-|       [Day 8]()        |            [Go]()             |                    |                    |
+|              Puzzle              |           Language            |     Completed      |      Specials      |
+|:--------------------------------:|:-----------------------------:|:------------------:|:------------------:|
+| [Day 1](./2024/day_01/day_01.md) | [Go](./2024/day_01/day_01.go) | :heavy_check_mark: | Array manipulation |
+| [Day 2](./2024/day_02/day_02.md) | [Go](./2024/day_02/day_02.go) |                    |                    |
+| [Day 3](./2024/day_03/day_03.md) | [Go](./2024/day_03/day_03.go) |                    |                    |
+| [Day 4](./2024/day_04/day_04.md) | [Go](./2024/day_04/day_04.go) |                    |                    |
+| [Day 5](./2024/day_05/day_05.md) | [Go](./2024/day_05/day_05.go) |                    |                    |
+| [Day 6](./2024/day_06/day_06.md) | [Go](./2024/day_06/day_06.go) |                    |                    |
+| [Day 7](./2024/day_07/day_07.md) | [Go](./2024/day_07/day_07.go) |                    |                    |
+| [Day 8](./2024/day_08/day_08.md) | [Go](./2024/day_08/day_08.go) |                    |                    |
 
 
 ## AoC 2023
@@ -32,7 +29,7 @@ In 2023 I completed TryHackMe's Advent of Cyber instead.
 
 ## AoC 2021
 
-In 2021 year I tried to complete every day at least with my strongest suit (Python) within the day and save a record whether the target has been met. Then, attempt to complete them in Golang without a time constraint (ideally marked with a check if solved before the next Advent of Code).
+In 2021, I tried to complete every day at least with my strongest suit (Python) within the day and save a record whether the target had been met. Then, attempt to complete them in Golang without a time constraint (ideally marked with a check if solved before the next Advent of Code).
 
 |                                   Puzzle                                   |                                       Language                                       |     Completed      | Target met on time |                 Specials                 |
 |:--------------------------------------------------------------------------:|:------------------------------------------------------------------------------------:|:------------------:|:------------------:|:----------------------------------------:|
