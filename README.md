@@ -14,11 +14,6 @@ Aside from TryHackMe's Advent of Cyber, this year I'll try to solve all the puzz
 | [Day 2](./2024/day_02/day_02.md) | [Go](./2024/day_02/day_02.go) |                    |                    |
 | [Day 3](./2024/day_03/day_03.md) | [Go](./2024/day_03/day_03.go) |                    |                    |
 | [Day 4](./2024/day_04/day_04.md) | [Go](./2024/day_04/day_04.go) |                    |                    |
-| [Day 5](./2024/day_05/day_05.md) | [Go](./2024/day_05/day_05.go) |                    |                    |
-| [Day 6](./2024/day_06/day_06.md) | [Go](./2024/day_06/day_06.go) |                    |                    |
-| [Day 7](./2024/day_07/day_07.md) | [Go](./2024/day_07/day_07.go) |                    |                    |
-| [Day 8](./2024/day_08/day_08.md) | [Go](./2024/day_08/day_08.go) |                    |                    |
-
 
 ## AoC 2023
 
