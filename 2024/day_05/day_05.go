@@ -46,7 +46,7 @@ func main() {
 				fmt.Println(pagesMap[k])
 				// To complete
 				if pagesMap[k][0] == pageToOrder {
-
+					fmt.Println("Page to order: ", pageToOrder)
 				}
 			}
 
