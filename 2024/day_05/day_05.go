@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"slices"
 	"strconv"
 	"strings"
 
@@ -12,7 +13,7 @@ import (
 )
 
 func main() {
-	input := GetInputAsStringArray("2024/day_05/test_input.txt")
+	input := GetInputAsStringArray("test_input.txt")
 	fmt.Println(input)
 
 	pagesMap := make(map[int][]string)
@@ -40,17 +41,23 @@ func main() {
 		pagesOrder := strings.Split(pages, ",")
 
 		middlePage := len(pagesOrder) / 2
+		// j = page to order index
 		for j, pageToOrder := range pagesOrder {
 			fmt.Println("Checking order of page", j, pageToOrder)
 			for k := range len(pagesMap) {
-				fmt.Println(pagesMap[k])
-				// To complete
-				if pagesMap[k][0] == pageToOrder {
-					fmt.Println("Page to order: ", pageToOrder)
+				fmt.Println("PagesMap[k]: ", pagesMap[k])
+				// TODO
+				// Take out pages if they're in the wrong order
+				// First page coming second
+				if j == 0 {
+					if pageToOrder == pagesMap[k][1] && slices.Contains(pagesOrder, pagesMap[k][0]) {
+						fmt.Println("Incorrect order:", pagesMap[k])
+						correctOrder = false
+						break
+					}
 				}
 			}
 
-			correctOrder = false
 		}
 
 		// Add middlePage to the result
