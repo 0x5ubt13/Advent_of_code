@@ -141,6 +141,139 @@ func GetInputAsByteArray(filename string) []byte {
 	return bytes
 }
 
+// GetInputAsString reads entire file as a single string
+func GetInputAsString(filename string) string {
+	bytes, err := os.ReadFile(filename)
+	ErrorCheck(err)
+	return string(bytes)
+}
+
+// GetInputAsCharGrid reads file as 2D rune array (character grid)
+// Useful for grid-based puzzles like mazes, maps, etc.
+func GetInputAsCharGrid(filename string) [][]rune {
+	lines := GetInputAsStringArray(filename)
+	grid := make([][]rune, len(lines))
+	for i, line := range lines {
+		grid[i] = []rune(line)
+	}
+	return grid
+}
+
+// GetInputAsIntArray reads file where each line is a single integer
+func GetInputAsIntArray(filename string) []int {
+	lines := make([]int, 0)
+
+	f, err := os.Open(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer f.Close()
+
+	scanner := bufio.NewScanner(f)
+	scanner.Split(bufio.ScanLines)
+
+	for scanner.Scan() {
+		intLine, err2 := strconv.Atoi(scanner.Text())
+		if err2 != nil {
+			log.Fatal(err2)
+		}
+		lines = append(lines, intLine)
+	}
+	return lines
+}
+
+// GetInputAsArrayOfIntArrays reads file where each line contains space-separated integers
+func GetInputAsArrayOfIntArrays(filename string) [][]int {
+	lines := make([][]int, 0)
+
+	f, err := os.Open(filename)
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer func(f *os.File) {
+		err := f.Close()
+		if err != nil {
+		}
+	}(f)
+
+	scanner := bufio.NewScanner(f)
+	scanner.Split(bufio.ScanLines)
+
+	for scanner.Scan() {
+		numbersLine := strings.Fields(scanner.Text())
+		intline := make([]int, len(numbersLine))
+		for i := 0; i < len(numbersLine); i++ {
+			intline[i], err = strconv.Atoi(numbersLine[i])
+			if err != nil {
+				log.Fatal(err)
+			}
+		}
+		lines = append(lines, intline)
+	}
+	return lines
+}
+
+// GetInputAsIntArrayFromCSV reads a single line of comma-separated integers
+// Example: "1,2,3,4,5" -> []int{1,2,3,4,5}
+func GetInputAsIntArrayFromCSV(filename string) []int {
+	content := GetInputAsString(filename)
+	content = strings.TrimSpace(content)
+	parts := strings.Split(content, ",")
+
+	result := make([]int, len(parts))
+	for i, part := range parts {
+		num, err := strconv.Atoi(strings.TrimSpace(part))
+		ErrorCheck(err)
+		result[i] = num
+	}
+	return result
+}
+
+// GetInputAsIntArrayFromCSVWithDelimiter reads a single line with custom delimiter
+func GetInputAsIntArrayFromCSVWithDelimiter(filename string, delimiter string) []int {
+	content := GetInputAsString(filename)
+	content = strings.TrimSpace(content)
+	parts := strings.Split(content, delimiter)
+
+	result := make([]int, len(parts))
+	for i, part := range parts {
+		num, err := strconv.Atoi(strings.TrimSpace(part))
+		ErrorCheck(err)
+		result[i] = num
+	}
+	return result
+}
+
+// GetInputAsParagraphs reads file split by blank lines
+// Returns [][]string where each []string is a paragraph (group of lines)
+// Useful for puzzles with grouped data
+func GetInputAsParagraphs(filename string) [][]string {
+	content := GetInputAsString(filename)
+	paragraphs := strings.Split(content, "\n\n")
+
+	result := make([][]string, len(paragraphs))
+	for i, paragraph := range paragraphs {
+		lines := strings.Split(strings.TrimSpace(paragraph), "\n")
+		result[i] = lines
+	}
+	return result
+}
+
+// GetInputAsIntGrid reads file as 2D int array where each character is a digit
+// Example: "123\n456" -> [][]int{{1,2,3},{4,5,6}}
+// Useful for height maps, digit grids, etc.
+func GetInputAsIntGrid(filename string) [][]int {
+	lines := GetInputAsStringArray(filename)
+	grid := make([][]int, len(lines))
+	for i, line := range lines {
+		grid[i] = make([]int, len(line))
+		for j, char := range line {
+			grid[i][j] = int(char - '0')
+		}
+	}
+	return grid
+}
+
 // Condensing error handling
 func ErrorCheck(e error) {
 	if e != nil {
