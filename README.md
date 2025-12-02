@@ -10,7 +10,8 @@ This year I'll attempt to solve all the puzzles of Advent of Code in Go, with no
 
 |              Puzzle              |           Language            |     Completed      |      Specials      |
 |:--------------------------------:|:-----------------------------:|:------------------:|:------------------:|
-| [Day 1](./2025/day_01/day_01.md) | [Go](./2025/day_01/day_01.go) |        :star2::star2:         |         Modulo fun           |
+| [Day 1](./2025/day_01/day_01.md) | [Go](./2025/day_01/day_01.go) |   :star2::star2:   |     Modulo fun     |
+| [Day 2](./2025/day_02/day_02.md) | [Go](./2025/day_02/day_02.go) |   :star2::star2:   |                    |
 
 ## AoC 2024
 
