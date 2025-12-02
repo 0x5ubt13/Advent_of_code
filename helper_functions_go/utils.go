@@ -244,6 +244,20 @@ func GetInputAsIntArrayFromCSVWithDelimiter(filename string, delimiter string) [
 	return result
 }
 
+// GetInputAsStringArrayFromCSVWithDelimiter reads a single line with custom delimiter and returns an array of strings
+func GetInputAsStringArrayFromCSVWithDelimiter(filename string, delimiter string) []string {
+	content := GetInputAsString(filename)
+	content = strings.TrimSpace(content)
+	parts := strings.Split(content, delimiter)
+
+	result := make([]string, len(parts))
+	for i, part := range parts {
+		partTrimmed := strings.TrimSpace(part)
+		result[i] = partTrimmed
+	}
+	return result
+}
+
 // GetInputAsParagraphs reads file split by blank lines
 // Returns [][]string where each []string is a paragraph (group of lines)
 // Useful for puzzles with grouped data
