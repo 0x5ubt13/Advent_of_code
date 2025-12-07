@@ -14,7 +14,9 @@ This year I'll attempt to solve all the puzzles of Advent of Code in Go, with no
 | [Day 2](./2025/day_02/day_02.md) | [Go](./2025/day_02/day_02.go) |   :star2::star2:   |                    |
 | [Day 3](./2025/day_03/day_03.md) | [Go](./2025/day_03/day_03.go) |   :star2::star2:   |     Recursion      |
 | [Day 4](./2025/day_04/day_04.md) | [Go](./2025/day_04/day_04.go) |  :star2::star2:  |     Grid coordinates     |
-| [Day 5](./2025/day_05/day_05.md) | [Go](./2025/day_05/day_05.go) |  |    |
+| [Day 5](./2025/day_05/day_05.md) | [Go](./2025/day_05/day_05.go) | :star2::star2: |  Optimisation  |
+| [Day 6](./2025/day_06/day_06.md) | [Go](./2025/day_06/day_06.go) | :star2::star2: |  String array manipulation  |
+| [Day 7](./2025/day_07/day_07.md) | [Go](./2025/day_07/day_07.go) |  |    |
 
 ## AoC 2024
 

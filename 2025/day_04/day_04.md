@@ -1,9 +1,5 @@
 # Day 04
 
-## Part 1
+(Link to the 4th puzzle for 2025)[https://adventofcode.com/2025/day/4]
 
-[Puzzle description will go here]
-
-## Part 2
-
-[Puzzle description will go here]
+(My solution in Go)[./day_04.go]
